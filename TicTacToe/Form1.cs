@@ -33,6 +33,11 @@ namespace TicTacToe
             MessageBox.Show("Created by Mine, 2021", "About");
         }
 
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit the program?", "Exit Application", MessageBoxButtons.YesNo);
@@ -60,7 +65,7 @@ namespace TicTacToe
 
             turn = !turn;
             b.Enabled = false;
-
+            turnCount++;
             checkForWinner();
         }
         private void checkForWinner()
@@ -77,7 +82,9 @@ namespace TicTacToe
 
             if (there_is_a_winner)
             {
-                string winner = "";
+                disableButtons();
+
+                String winner = "";
                 if (turn)
                     winner = "Player 'O'";
                 else
@@ -85,18 +92,30 @@ namespace TicTacToe
 
                 MessageBox.Show(winner + " Wins!", "Congrats!");
             }
+            else
+            {
+                if(turnCount == 9)
+                {
+                    MessageBox.Show("Draw!", "Result");
+                }
+            }
+
         }
 
         private void disableButtons()
         {
-            foreach (Component c in components)
-            {
+            try 
+            { 
+                foreach (Control c in Controls)
+                {
+                Button b = (Button)c;
+                b.Enabled = false;
+                
 
-            }
+
+                } //end foreach
+            } //end try
+            catch { }
         }
-       
-        
-
-        
     }
 }
