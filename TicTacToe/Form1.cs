@@ -35,6 +35,7 @@ namespace TicTacToe
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace TicTacToe
             //diagonal checks
             if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
-            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3.Enabled))
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3 .Enabled))
                 there_is_a_winner = true;
 
             if (there_is_a_winner)
@@ -123,9 +124,7 @@ namespace TicTacToe
                 {
                 Button b = (Button)c;
                 b.Enabled = false;
-                
-
-
+           
                 } //end foreach
             } //end try
             catch { }
