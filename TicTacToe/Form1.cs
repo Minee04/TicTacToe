@@ -17,7 +17,6 @@ namespace TicTacToe
 
         int turnCount = 0;
 
-
         public frmMain()
         {
             InitializeComponent();
@@ -79,6 +78,20 @@ namespace TicTacToe
                     there_is_a_winner = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                     there_is_a_winner = true;
+
+            //vertical checks
+            if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+                there_is_a_winner = true;
+            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B1.Enabled))
+                there_is_a_winner = true;
+            else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!C1.Enabled))
+                there_is_a_winner = true;
+
+            //diagonal checks
+            if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
+                there_is_a_winner = true;
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3.Enabled))
+                there_is_a_winner = true;
 
             if (there_is_a_winner)
             {
