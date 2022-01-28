@@ -72,14 +72,14 @@ namespace TicTacToe
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(200, 34);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(200, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -94,7 +94,7 @@ namespace TicTacToe
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -107,6 +107,8 @@ namespace TicTacToe
             this.A1.TabIndex = 3;
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.btnClick);
+            this.A1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // A2
             // 
@@ -117,6 +119,8 @@ namespace TicTacToe
             this.A2.TabIndex = 4;
             this.A2.UseVisualStyleBackColor = true;
             this.A2.Click += new System.EventHandler(this.btnClick);
+            this.A2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // A3
             // 
@@ -127,6 +131,8 @@ namespace TicTacToe
             this.A3.TabIndex = 5;
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.btnClick);
+            this.A3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B1
             // 
@@ -137,6 +143,8 @@ namespace TicTacToe
             this.B1.TabIndex = 6;
             this.B1.UseVisualStyleBackColor = true;
             this.B1.Click += new System.EventHandler(this.btnClick);
+            this.B1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B2
             // 
@@ -147,6 +155,8 @@ namespace TicTacToe
             this.B2.TabIndex = 7;
             this.B2.UseVisualStyleBackColor = true;
             this.B2.Click += new System.EventHandler(this.btnClick);
+            this.B2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B3
             // 
@@ -157,6 +167,8 @@ namespace TicTacToe
             this.B3.TabIndex = 8;
             this.B3.UseVisualStyleBackColor = true;
             this.B3.Click += new System.EventHandler(this.btnClick);
+            this.B3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C1
             // 
@@ -167,6 +179,8 @@ namespace TicTacToe
             this.C1.TabIndex = 9;
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.btnClick);
+            this.C1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C2
             // 
@@ -177,6 +191,8 @@ namespace TicTacToe
             this.C2.TabIndex = 10;
             this.C2.UseVisualStyleBackColor = true;
             this.C2.Click += new System.EventHandler(this.btnClick);
+            this.C2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C3
             // 
@@ -187,6 +203,8 @@ namespace TicTacToe
             this.C3.TabIndex = 11;
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.btnClick);
+            this.C3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // frmMain
             // 

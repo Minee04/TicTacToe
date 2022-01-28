@@ -129,5 +129,28 @@ namespace TicTacToe
             } //end try
             catch { }
         }
+
+        private void btnEnter(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            if (b.Enabled)
+            {
+
+
+                if (turn)
+                {
+                    b.Text = "X";
+                }
+                else
+                {
+                    b.Text = "O";
+                }
+            }
+        }
+
+        private void btnLeave(object sender, EventArgs e)
+        {
+
+        }
     }
 }
