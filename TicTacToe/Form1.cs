@@ -29,7 +29,7 @@ namespace TicTacToe
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Created by Mine, 2021", "About");
+            MessageBox.Show("Created by Mine, 2022", "About");
         }
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,27 +72,27 @@ namespace TicTacToe
         {
             bool there_is_a_winner = false;
 
-            //horizontal checks
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
                     there_is_a_winner = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                     there_is_a_winner = true;
+            //horizontal checks
 
-            //vertical checks
             if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B1.Enabled))
                 there_is_a_winner = true;
             else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!C1.Enabled))
                 there_is_a_winner = true;
+            //vertical checks
 
-            //diagonal checks
             if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3 .Enabled))
                 there_is_a_winner = true;
+            //diagonal checks 
 
             if (there_is_a_winner)
             {
@@ -100,9 +100,17 @@ namespace TicTacToe
 
                 String winner = "";
                 if (turn)
+                {
                     winner = "Player 'O'";
+                    OWinCount.Text = (int.Parse());
+                }
+
                 else
+                {
                     winner = "Player 'X'";
+                    XWinCount.Text
+                }
+                    
 
                 MessageBox.Show(winner + " Wins!", "Congrats!");
             }
@@ -135,8 +143,6 @@ namespace TicTacToe
             Button b = (Button)sender;
             if (b.Enabled)
             {
-
-
                 if (turn)
                 {
                     b.Text = "X";
@@ -144,13 +150,17 @@ namespace TicTacToe
                 else
                 {
                     b.Text = "O";
-                }
+                }//end if
             }
         }
 
         private void btnLeave(object sender, EventArgs e)
         {
-
+            Button b = (Button)sender;
+            if (b.Enabled)
+            { 
+                    b.Text = "";
+            }
         }
     }
 }

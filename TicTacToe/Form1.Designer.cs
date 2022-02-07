@@ -44,6 +44,12 @@ namespace TicTacToe
             this.C1 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
+            this.lblCounterX = new System.Windows.Forms.Label();
+            this.lblCounterDraw = new System.Windows.Forms.Label();
+            this.lblCounterO = new System.Windows.Forms.Label();
+            this.XWinCount = new System.Windows.Forms.Label();
+            this.OWinCount = new System.Windows.Forms.Label();
+            this.DrawCount = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +62,7 @@ namespace TicTacToe
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(363, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(363, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +72,7 @@ namespace TicTacToe
             this.newGameToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newGameToolStripMenuItem
@@ -88,7 +94,7 @@ namespace TicTacToe
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -206,11 +212,77 @@ namespace TicTacToe
             this.C3.MouseEnter += new System.EventHandler(this.btnEnter);
             this.C3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
+            // lblCounterX
+            // 
+            this.lblCounterX.AutoSize = true;
+            this.lblCounterX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounterX.Location = new System.Drawing.Point(7, 413);
+            this.lblCounterX.Name = "lblCounterX";
+            this.lblCounterX.Size = new System.Drawing.Size(72, 25);
+            this.lblCounterX.TabIndex = 12;
+            this.lblCounterX.Text = "X Win:";
+            // 
+            // lblCounterDraw
+            // 
+            this.lblCounterDraw.AutoSize = true;
+            this.lblCounterDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounterDraw.Location = new System.Drawing.Point(124, 413);
+            this.lblCounterDraw.Name = "lblCounterDraw";
+            this.lblCounterDraw.Size = new System.Drawing.Size(63, 25);
+            this.lblCounterDraw.TabIndex = 13;
+            this.lblCounterDraw.Text = "Draw:";
+            // 
+            // lblCounterO
+            // 
+            this.lblCounterO.AutoSize = true;
+            this.lblCounterO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounterO.Location = new System.Drawing.Point(242, 413);
+            this.lblCounterO.Name = "lblCounterO";
+            this.lblCounterO.Size = new System.Drawing.Size(74, 25);
+            this.lblCounterO.TabIndex = 14;
+            this.lblCounterO.Text = "O Win:";
+            // 
+            // XWinCount
+            // 
+            this.XWinCount.AutoSize = true;
+            this.XWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XWinCount.Location = new System.Drawing.Point(85, 415);
+            this.XWinCount.Name = "XWinCount";
+            this.XWinCount.Size = new System.Drawing.Size(23, 25);
+            this.XWinCount.TabIndex = 15;
+            this.XWinCount.Text = "0";
+            // 
+            // OWinCount
+            // 
+            this.OWinCount.AutoSize = true;
+            this.OWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OWinCount.Location = new System.Drawing.Point(322, 413);
+            this.OWinCount.Name = "OWinCount";
+            this.OWinCount.Size = new System.Drawing.Size(23, 25);
+            this.OWinCount.TabIndex = 16;
+            this.OWinCount.Text = "0";
+            // 
+            // DrawCount
+            // 
+            this.DrawCount.AutoSize = true;
+            this.DrawCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrawCount.Location = new System.Drawing.Point(193, 413);
+            this.DrawCount.Name = "DrawCount";
+            this.DrawCount.Size = new System.Drawing.Size(23, 25);
+            this.DrawCount.TabIndex = 17;
+            this.DrawCount.Text = "0";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 405);
+            this.ClientSize = new System.Drawing.Size(363, 449);
+            this.Controls.Add(this.DrawCount);
+            this.Controls.Add(this.OWinCount);
+            this.Controls.Add(this.XWinCount);
+            this.Controls.Add(this.lblCounterO);
+            this.Controls.Add(this.lblCounterDraw);
+            this.Controls.Add(this.lblCounterX);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -251,6 +323,12 @@ namespace TicTacToe
         private System.Windows.Forms.Button C1;
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C3;
+        private System.Windows.Forms.Label lblCounterX;
+        private System.Windows.Forms.Label lblCounterDraw;
+        private System.Windows.Forms.Label lblCounterO;
+        private System.Windows.Forms.Label XWinCount;
+        private System.Windows.Forms.Label OWinCount;
+        private System.Windows.Forms.Label DrawCount;
     }
 }
 
