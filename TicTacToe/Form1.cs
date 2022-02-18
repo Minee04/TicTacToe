@@ -34,8 +34,22 @@ namespace TicTacToe
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            //MessageBox.Show("Restart", "About");
+            turn = true;
+            turnCount = 0;
 
+            
+                foreach (Control c in Controls)
+                {
+                try
+                    {
+                       Button b = (Button)c;
+                       b.Enabled = true;
+                      b.Text = "";
+                    }
+                catch { }
+                }
+            
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,15 +96,15 @@ namespace TicTacToe
 
             if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
-            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B1.Enabled))
+            else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B2.Enabled))
                 there_is_a_winner = true;
-            else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!C1.Enabled))
+            else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!C3.Enabled))
                 there_is_a_winner = true;
             //vertical checks
 
             if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
-            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3 .Enabled))
+            else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!B2.Enabled))
                 there_is_a_winner = true;
             //diagonal checks 
 
@@ -101,14 +115,14 @@ namespace TicTacToe
                 String winner = "";
                 if (turn)
                 {
-                    winner = "Player 'O'";
-                    OWinCount.Text = (int.Parse());
+                    winner = tbxP2.Text;
+                    OWinCount.Text = (int.Parse(OWinCount.Text) + 1).ToString();  
                 }
 
                 else
                 {
-                    winner = "Player 'X'";
-                    XWinCount.Text
+                    winner = tbxP1.Text;
+                    XWinCount.Text = (int.Parse(XWinCount.Text) + 1).ToString();
                 }
                     
 
@@ -119,6 +133,7 @@ namespace TicTacToe
                 if(turnCount == 9)
                 {
                     MessageBox.Show("Draw!", "Result");
+                    DrawCount.Text = (int.Parse(DrawCount.Text) + 1).ToString();
                 }
             }
 
@@ -126,16 +141,18 @@ namespace TicTacToe
 
         private void disableButtons()
         {
-            try 
-            { 
-                foreach (Control c in Controls)
+            foreach (Control c in Controls)
+            {
+                try
                 {
-                Button b = (Button)c;
-                b.Enabled = false;
-           
-                } //end foreach
-            } //end try
-            catch { }
+                    Button b = (Button)c;
+                    b.Enabled = false;
+                    b.Text = "";
+
+                }//end try
+                catch { }
+            }//end foreach
+
         }
 
         private void btnEnter(object sender, EventArgs e)
@@ -161,6 +178,18 @@ namespace TicTacToe
             { 
                     b.Text = "";
             }
+        }
+
+        private void resetScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OWinCount.Text = "0";
+            DrawCount.Text = "0";
+            XWinCount.Text = "0";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
