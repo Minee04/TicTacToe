@@ -32,6 +32,8 @@ namespace TicTacToe
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resetScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DefaultSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +50,6 @@ namespace TicTacToe
             this.XWinCount = new System.Windows.Forms.Label();
             this.OWinCount = new System.Windows.Forms.Label();
             this.DrawCount = new System.Windows.Forms.Label();
-            this.resetScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbxP1 = new System.Windows.Forms.TextBox();
             this.tbxP2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
@@ -63,7 +64,7 @@ namespace TicTacToe
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(363, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(363, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,9 +73,10 @@ namespace TicTacToe
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
             this.resetScoreToolStripMenuItem,
+            this.DefaultSettingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newGameToolStripMenuItem
@@ -83,6 +85,20 @@ namespace TicTacToe
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // resetScoreToolStripMenuItem
+            // 
+            this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
+            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.resetScoreToolStripMenuItem.Text = "Reset Score";
+            this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
+            // 
+            // DefaultSettingsToolStripMenuItem
+            // 
+            this.DefaultSettingsToolStripMenuItem.Name = "DefaultSettingsToolStripMenuItem";
+            this.DefaultSettingsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.DefaultSettingsToolStripMenuItem.Text = "Default Settings";
+            this.DefaultSettingsToolStripMenuItem.Click += new System.EventHandler(this.DefaultSettingsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -96,7 +112,7 @@ namespace TicTacToe
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -254,13 +270,6 @@ namespace TicTacToe
             this.DrawCount.TabIndex = 17;
             this.DrawCount.Text = "0";
             // 
-            // resetScoreToolStripMenuItem
-            // 
-            this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
-            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.resetScoreToolStripMenuItem.Text = "Reset Score";
-            this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
-            // 
             // tbxP1
             // 
             this.tbxP1.Location = new System.Drawing.Point(12, 404);
@@ -279,6 +288,7 @@ namespace TicTacToe
             this.tbxP2.TabIndex = 19;
             this.tbxP2.Text = "Player 2";
             this.tbxP2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxP2.TextChanged += new System.EventHandler(this.tbxP2_TextChanged);
             // 
             // frmMain
             // 
@@ -338,6 +348,7 @@ namespace TicTacToe
         private System.Windows.Forms.ToolStripMenuItem resetScoreToolStripMenuItem;
         private System.Windows.Forms.TextBox tbxP1;
         private System.Windows.Forms.TextBox tbxP2;
+        private System.Windows.Forms.ToolStripMenuItem DefaultSettingsToolStripMenuItem;
     }
 }
 
