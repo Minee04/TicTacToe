@@ -44,6 +44,13 @@ namespace TicTacToe
             this.C1 = new System.Windows.Forms.Button();
             this.C2 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
+            this.lblCounterDraw = new System.Windows.Forms.Label();
+            this.XWinCount = new System.Windows.Forms.Label();
+            this.OWinCount = new System.Windows.Forms.Label();
+            this.DrawCount = new System.Windows.Forms.Label();
+            this.resetScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxP1 = new System.Windows.Forms.TextBox();
+            this.tbxP2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +63,7 @@ namespace TicTacToe
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(363, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(363, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,9 +71,10 @@ namespace TicTacToe
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
+            this.resetScoreToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 30);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newGameToolStripMenuItem
@@ -88,13 +96,13 @@ namespace TicTacToe
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -107,6 +115,8 @@ namespace TicTacToe
             this.A1.TabIndex = 3;
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.btnClick);
+            this.A1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // A2
             // 
@@ -117,6 +127,8 @@ namespace TicTacToe
             this.A2.TabIndex = 4;
             this.A2.UseVisualStyleBackColor = true;
             this.A2.Click += new System.EventHandler(this.btnClick);
+            this.A2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // A3
             // 
@@ -127,6 +139,8 @@ namespace TicTacToe
             this.A3.TabIndex = 5;
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.btnClick);
+            this.A3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.A3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B1
             // 
@@ -137,6 +151,8 @@ namespace TicTacToe
             this.B1.TabIndex = 6;
             this.B1.UseVisualStyleBackColor = true;
             this.B1.Click += new System.EventHandler(this.btnClick);
+            this.B1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B2
             // 
@@ -147,6 +163,8 @@ namespace TicTacToe
             this.B2.TabIndex = 7;
             this.B2.UseVisualStyleBackColor = true;
             this.B2.Click += new System.EventHandler(this.btnClick);
+            this.B2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // B3
             // 
@@ -157,6 +175,8 @@ namespace TicTacToe
             this.B3.TabIndex = 8;
             this.B3.UseVisualStyleBackColor = true;
             this.B3.Click += new System.EventHandler(this.btnClick);
+            this.B3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.B3.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C1
             // 
@@ -167,6 +187,8 @@ namespace TicTacToe
             this.C1.TabIndex = 9;
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.btnClick);
+            this.C1.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C1.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C2
             // 
@@ -177,6 +199,8 @@ namespace TicTacToe
             this.C2.TabIndex = 10;
             this.C2.UseVisualStyleBackColor = true;
             this.C2.Click += new System.EventHandler(this.btnClick);
+            this.C2.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C2.MouseLeave += new System.EventHandler(this.btnLeave);
             // 
             // C3
             // 
@@ -187,12 +211,86 @@ namespace TicTacToe
             this.C3.TabIndex = 11;
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.btnClick);
+            this.C3.MouseEnter += new System.EventHandler(this.btnEnter);
+            this.C3.MouseLeave += new System.EventHandler(this.btnLeave);
+            // 
+            // lblCounterDraw
+            // 
+            this.lblCounterDraw.AutoSize = true;
+            this.lblCounterDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCounterDraw.Location = new System.Drawing.Point(151, 405);
+            this.lblCounterDraw.Name = "lblCounterDraw";
+            this.lblCounterDraw.Size = new System.Drawing.Size(63, 25);
+            this.lblCounterDraw.TabIndex = 13;
+            this.lblCounterDraw.Text = "Draw:";
+            // 
+            // XWinCount
+            // 
+            this.XWinCount.AutoSize = true;
+            this.XWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XWinCount.Location = new System.Drawing.Point(51, 432);
+            this.XWinCount.Name = "XWinCount";
+            this.XWinCount.Size = new System.Drawing.Size(23, 25);
+            this.XWinCount.TabIndex = 15;
+            this.XWinCount.Text = "0";
+            // 
+            // OWinCount
+            // 
+            this.OWinCount.AutoSize = true;
+            this.OWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OWinCount.Location = new System.Drawing.Point(287, 432);
+            this.OWinCount.Name = "OWinCount";
+            this.OWinCount.Size = new System.Drawing.Size(23, 25);
+            this.OWinCount.TabIndex = 16;
+            this.OWinCount.Text = "0";
+            // 
+            // DrawCount
+            // 
+            this.DrawCount.AutoSize = true;
+            this.DrawCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DrawCount.Location = new System.Drawing.Point(169, 432);
+            this.DrawCount.Name = "DrawCount";
+            this.DrawCount.Size = new System.Drawing.Size(23, 25);
+            this.DrawCount.TabIndex = 17;
+            this.DrawCount.Text = "0";
+            // 
+            // resetScoreToolStripMenuItem
+            // 
+            this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
+            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.resetScoreToolStripMenuItem.Text = "Reset Score";
+            this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
+            // 
+            // tbxP1
+            // 
+            this.tbxP1.Location = new System.Drawing.Point(12, 404);
+            this.tbxP1.Name = "tbxP1";
+            this.tbxP1.Size = new System.Drawing.Size(100, 26);
+            this.tbxP1.TabIndex = 18;
+            this.tbxP1.Text = "Player 1";
+            this.tbxP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbxP1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // tbxP2
+            // 
+            this.tbxP2.Location = new System.Drawing.Point(247, 404);
+            this.tbxP2.Name = "tbxP2";
+            this.tbxP2.Size = new System.Drawing.Size(100, 26);
+            this.tbxP2.TabIndex = 19;
+            this.tbxP2.Text = "Player 2";
+            this.tbxP2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 405);
+            this.ClientSize = new System.Drawing.Size(363, 461);
+            this.Controls.Add(this.tbxP2);
+            this.Controls.Add(this.tbxP1);
+            this.Controls.Add(this.DrawCount);
+            this.Controls.Add(this.OWinCount);
+            this.Controls.Add(this.XWinCount);
+            this.Controls.Add(this.lblCounterDraw);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -233,6 +331,13 @@ namespace TicTacToe
         private System.Windows.Forms.Button C1;
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C3;
+        private System.Windows.Forms.Label lblCounterDraw;
+        private System.Windows.Forms.Label XWinCount;
+        private System.Windows.Forms.Label OWinCount;
+        private System.Windows.Forms.Label DrawCount;
+        private System.Windows.Forms.ToolStripMenuItem resetScoreToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbxP1;
+        private System.Windows.Forms.TextBox tbxP2;
     }
 }
 
