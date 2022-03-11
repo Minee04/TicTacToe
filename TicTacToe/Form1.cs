@@ -26,6 +26,25 @@ namespace TicTacToe
         {
             DefaultSettingsToolStripMenuItem.PerformClick();
 
+            /*if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
+            {
+                MessageBox.Show("You may change 'Player 2' to 'Computer' if you want to play against an AI.");
+            }
+            */
+            if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
+            {
+
+                DialogResult result = MessageBox.Show("Do you want to play against the AI?", "Restart Application", MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    tbxP2.Text = "Computer";
+                }
+                else
+                {
+
+                }
+            }
+
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +87,7 @@ namespace TicTacToe
 
         private void btnClick(object sender, EventArgs e)
         {
+
             Button b = (Button)sender;
             if (turn)
             {
@@ -83,11 +103,6 @@ namespace TicTacToe
             turnCount++;
             checkForWinner();
 
-            if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
-            {
-                MessageBox.Show("You may change 'Player 2' to 'Computer' if you want to play against an AI.");
-            }
-
             //Check to see if playing against computer and if it's O's turn
             if ((!turn) && (against_computer))
             {
@@ -101,7 +116,8 @@ namespace TicTacToe
             //Priority 1:  Get tick tac toe
             //Priority 2:  Block x tic tac toe
             //Priority 3:  Go for corner space
-            //Priority 4:  Pick open space
+            //Priority 4:  Go for middle space
+            //Priority 5:  Pick open space
 
             Button move = null;
 
@@ -116,11 +132,17 @@ namespace TicTacToe
                     if (move == null)
                     {
                         move = look_for_open_space();
-                    }//end if
-                }//end if
-            }//end if
+                    }
 
-            move.PerformClick();
+                }
+            }
+
+            if(turnCount < 9)
+            {
+                move.PerformClick();
+            }
+            
+
         }
 
         private Button look_for_open_space()
