@@ -53,7 +53,6 @@ namespace TicTacToe
             turn = true;
             turnCount = 0;
 
-            
                 foreach (Control c in Controls)
                 {
                 try
@@ -63,8 +62,7 @@ namespace TicTacToe
                       b.Text = "";
                     }
                 catch { }
-                }
-            
+                } 
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,7 +124,11 @@ namespace TicTacToe
                     move = look_for_corner();
                     if (move == null)
                     {
-                        move = look_for_open_space();
+                        move = look_for_middle();
+                        if(move == null)
+                        {
+                            move = look_for_open_space();
+                        }
                     }
 
                 }
@@ -136,8 +138,6 @@ namespace TicTacToe
             {
                 move.PerformClick();
             }
-            
-
         }
 
         private Button look_for_open_space()
@@ -156,8 +156,18 @@ namespace TicTacToe
 
             return null;
         }
+            private Button look_for_middle()
+        {
+            Console.WriteLine("Looking for middle");
+           
+            if (B2.Text == "")
+                return B2;
+           
+            return null;
 
-        private Button look_for_corner()
+                
+        }
+            private Button look_for_corner()
         {
             Console.WriteLine("Looking for corner");
             if (A1.Text == "O")
@@ -280,28 +290,28 @@ namespace TicTacToe
         {
             bool there_is_a_winner = false;
 
+            //Horizontal checks
             if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
                     there_is_a_winner = true;
             else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
                     there_is_a_winner = true;
-            //Horizontal checks
 
+            //Vertical checks
             if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!B2.Enabled))
                 there_is_a_winner = true;
             else if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!C3.Enabled))
                 there_is_a_winner = true;
-            //Vertical checks
 
+            //Diagonal checks
             if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled))
                 there_is_a_winner = true;
             else if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!B2.Enabled))
                 there_is_a_winner = true;
-            //Diagonal checks 
-
+            
             if (there_is_a_winner)
             {
                 disableButtons();
@@ -331,7 +341,6 @@ namespace TicTacToe
                 }
             }
         }
-
         private void disableButtons()
         {
             foreach (Control c in Controls)
@@ -345,9 +354,7 @@ namespace TicTacToe
                 }//end try
                 catch { }
             }//end foreach
-
         }
-
         private void btnEnter(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -363,7 +370,6 @@ namespace TicTacToe
                 }//end if
             }
         }
-
         private void btnLeave(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -372,19 +378,16 @@ namespace TicTacToe
                     b.Text = "";
             }
         }
-
         private void resetScoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OWinCount.Text = "0";
             DrawCount.Text = "0";
             XWinCount.Text = "0";
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void tbxP2_TextChanged(object sender, EventArgs e)
         {
             if (tbxP2.Text.ToUpper() == "COMPUTER")
@@ -401,7 +404,5 @@ namespace TicTacToe
             tbxP1.Text = "Player 1";
             tbxP2.Text = "Player 2";
         }
-
-
     }
 }
