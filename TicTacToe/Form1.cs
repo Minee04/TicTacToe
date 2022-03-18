@@ -26,11 +26,6 @@ namespace TicTacToe
         {
             DefaultSettingsToolStripMenuItem.PerformClick();
 
-            /*if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
-            {
-                MessageBox.Show("You may change 'Player 2' to 'Computer' if you want to play against an AI.");
-            }
-            */
             if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
             {
 
