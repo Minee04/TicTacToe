@@ -33,7 +33,6 @@ namespace TicTacToe
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DefaultSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,11 +72,10 @@ namespace TicTacToe
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
             this.resetScoreToolStripMenuItem,
-            this.DefaultSettingsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
+            this.fileToolStripMenuItem.Text = "Settings";
             // 
             // newGameToolStripMenuItem
             // 
@@ -92,13 +90,6 @@ namespace TicTacToe
             this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.resetScoreToolStripMenuItem.Text = "Reset Score";
             this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
-            // 
-            // DefaultSettingsToolStripMenuItem
-            // 
-            this.DefaultSettingsToolStripMenuItem.Name = "DefaultSettingsToolStripMenuItem";
-            this.DefaultSettingsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.DefaultSettingsToolStripMenuItem.Text = "Default Settings";
-            this.DefaultSettingsToolStripMenuItem.Click += new System.EventHandler(this.DefaultSettingsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -348,7 +339,6 @@ namespace TicTacToe
         private System.Windows.Forms.ToolStripMenuItem resetScoreToolStripMenuItem;
         private System.Windows.Forms.TextBox tbxP1;
         private System.Windows.Forms.TextBox tbxP2;
-        private System.Windows.Forms.ToolStripMenuItem DefaultSettingsToolStripMenuItem;
     }
 }
 

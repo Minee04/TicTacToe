@@ -24,8 +24,6 @@ namespace TicTacToe
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            DefaultSettingsToolStripMenuItem.PerformClick();
-
             if (tbxP1.Text == "Player 1" && tbxP2.Text == "Player 2")
             {
 
@@ -39,7 +37,6 @@ namespace TicTacToe
 
                 }
             }
-
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,13 +100,12 @@ namespace TicTacToe
             }
             
         }
-
         private void computer_make_move()
         {
             //Priority 1:  Get tick tac toe
             //Priority 2:  Block x tic tac toe
-            //Priority 3:  Go for corner space
-            //Priority 4:  Go for middle space
+            //Priority 3:  Go for middle space
+            //Priority 4:  Go for corner space
             //Priority 5:  Pick open space
 
             Button move = null;
@@ -121,13 +117,13 @@ namespace TicTacToe
                 move = look_for_win_or_block("X"); //Look for block
                 if (move == null)
                 {
-                    move = look_for_corner();
+                    move = look_for_middle(); //Look for middle
                     if (move == null)
                     {
-                        move = look_for_middle();
+                        move = look_for_corner(); //Look for corner
                         if(move == null)
                         {
-                            move = look_for_open_space();
+                            move = look_for_open_space(); //Look for open space
                         }
                     }
 
@@ -163,9 +159,7 @@ namespace TicTacToe
             if (B2.Text == "")
                 return B2;
            
-            return null;
-
-                
+            return null;      
         }
             private Button look_for_corner()
         {
@@ -331,6 +325,7 @@ namespace TicTacToe
                     
 
                 MessageBox.Show(winner + " Wins!", "Congrats!");
+
             }
             else
             {
@@ -338,8 +333,10 @@ namespace TicTacToe
                 {
                     MessageBox.Show("Draw!", "Result");
                     DrawCount.Text = (int.Parse(DrawCount.Text) + 1).ToString();
+
                 }
             }
+
         }
         private void disableButtons()
         {
@@ -398,11 +395,6 @@ namespace TicTacToe
             {
                 against_computer = false;
             }
-        }
-        private void DefaultSettingsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tbxP1.Text = "Player 1";
-            tbxP2.Text = "Player 2";
         }
     }
 }
