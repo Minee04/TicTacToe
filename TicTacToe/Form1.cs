@@ -390,10 +390,13 @@ namespace TicTacToe
             if (tbxP2.Text.ToUpper() == "COMPUTER")
             {
                 against_computer = true;
+
+                tbxP1.Text = "You";
             }
             else
             {
                 against_computer = false;
+                tbxP1.Text = "Player 1";
             }
         }
     }
