@@ -63,7 +63,8 @@ namespace TicTacToe
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(363, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(484, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,21 +81,21 @@ namespace TicTacToe
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(205, 34);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // resetScoreToolStripMenuItem
             // 
             this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
-            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(205, 34);
             this.resetScoreToolStripMenuItem.Text = "Reset Score";
             this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(205, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -116,9 +117,10 @@ namespace TicTacToe
             // A1
             // 
             this.A1.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A1.Location = new System.Drawing.Point(12, 41);
+            this.A1.Location = new System.Drawing.Point(16, 51);
+            this.A1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A1.Name = "A1";
-            this.A1.Size = new System.Drawing.Size(100, 100);
+            this.A1.Size = new System.Drawing.Size(133, 125);
             this.A1.TabIndex = 3;
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.btnClick);
@@ -128,9 +130,10 @@ namespace TicTacToe
             // A2
             // 
             this.A2.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A2.Location = new System.Drawing.Point(129, 41);
+            this.A2.Location = new System.Drawing.Point(172, 51);
+            this.A2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A2.Name = "A2";
-            this.A2.Size = new System.Drawing.Size(100, 100);
+            this.A2.Size = new System.Drawing.Size(133, 125);
             this.A2.TabIndex = 4;
             this.A2.UseVisualStyleBackColor = true;
             this.A2.Click += new System.EventHandler(this.btnClick);
@@ -140,9 +143,10 @@ namespace TicTacToe
             // A3
             // 
             this.A3.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A3.Location = new System.Drawing.Point(247, 41);
+            this.A3.Location = new System.Drawing.Point(329, 51);
+            this.A3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(100, 100);
+            this.A3.Size = new System.Drawing.Size(133, 125);
             this.A3.TabIndex = 5;
             this.A3.UseVisualStyleBackColor = true;
             this.A3.Click += new System.EventHandler(this.btnClick);
@@ -152,9 +156,10 @@ namespace TicTacToe
             // B1
             // 
             this.B1.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B1.Location = new System.Drawing.Point(12, 167);
+            this.B1.Location = new System.Drawing.Point(16, 209);
+            this.B1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(100, 100);
+            this.B1.Size = new System.Drawing.Size(133, 125);
             this.B1.TabIndex = 6;
             this.B1.UseVisualStyleBackColor = true;
             this.B1.Click += new System.EventHandler(this.btnClick);
@@ -164,9 +169,10 @@ namespace TicTacToe
             // B2
             // 
             this.B2.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B2.Location = new System.Drawing.Point(129, 167);
+            this.B2.Location = new System.Drawing.Point(172, 209);
+            this.B2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B2.Name = "B2";
-            this.B2.Size = new System.Drawing.Size(100, 100);
+            this.B2.Size = new System.Drawing.Size(133, 125);
             this.B2.TabIndex = 7;
             this.B2.UseVisualStyleBackColor = true;
             this.B2.Click += new System.EventHandler(this.btnClick);
@@ -176,9 +182,10 @@ namespace TicTacToe
             // B3
             // 
             this.B3.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B3.Location = new System.Drawing.Point(247, 167);
+            this.B3.Location = new System.Drawing.Point(329, 209);
+            this.B3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(100, 100);
+            this.B3.Size = new System.Drawing.Size(133, 125);
             this.B3.TabIndex = 8;
             this.B3.UseVisualStyleBackColor = true;
             this.B3.Click += new System.EventHandler(this.btnClick);
@@ -188,9 +195,10 @@ namespace TicTacToe
             // C1
             // 
             this.C1.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C1.Location = new System.Drawing.Point(12, 293);
+            this.C1.Location = new System.Drawing.Point(16, 366);
+            this.C1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.C1.Name = "C1";
-            this.C1.Size = new System.Drawing.Size(100, 100);
+            this.C1.Size = new System.Drawing.Size(133, 125);
             this.C1.TabIndex = 9;
             this.C1.UseVisualStyleBackColor = true;
             this.C1.Click += new System.EventHandler(this.btnClick);
@@ -200,9 +208,10 @@ namespace TicTacToe
             // C2
             // 
             this.C2.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C2.Location = new System.Drawing.Point(129, 293);
+            this.C2.Location = new System.Drawing.Point(172, 366);
+            this.C2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.C2.Name = "C2";
-            this.C2.Size = new System.Drawing.Size(100, 100);
+            this.C2.Size = new System.Drawing.Size(133, 125);
             this.C2.TabIndex = 10;
             this.C2.UseVisualStyleBackColor = true;
             this.C2.Click += new System.EventHandler(this.btnClick);
@@ -212,9 +221,10 @@ namespace TicTacToe
             // C3
             // 
             this.C3.Font = new System.Drawing.Font("Comic Sans MS", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C3.Location = new System.Drawing.Point(247, 293);
+            this.C3.Location = new System.Drawing.Point(329, 366);
+            this.C3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.C3.Name = "C3";
-            this.C3.Size = new System.Drawing.Size(100, 100);
+            this.C3.Size = new System.Drawing.Size(133, 125);
             this.C3.TabIndex = 11;
             this.C3.UseVisualStyleBackColor = true;
             this.C3.Click += new System.EventHandler(this.btnClick);
@@ -225,7 +235,8 @@ namespace TicTacToe
             // 
             this.lblCounterDraw.AutoSize = true;
             this.lblCounterDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCounterDraw.Location = new System.Drawing.Point(151, 405);
+            this.lblCounterDraw.Location = new System.Drawing.Point(205, 506);
+            this.lblCounterDraw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCounterDraw.Name = "lblCounterDraw";
             this.lblCounterDraw.Size = new System.Drawing.Size(63, 25);
             this.lblCounterDraw.TabIndex = 13;
@@ -235,7 +246,8 @@ namespace TicTacToe
             // 
             this.XWinCount.AutoSize = true;
             this.XWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XWinCount.Location = new System.Drawing.Point(51, 432);
+            this.XWinCount.Location = new System.Drawing.Point(68, 540);
+            this.XWinCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.XWinCount.Name = "XWinCount";
             this.XWinCount.Size = new System.Drawing.Size(23, 25);
             this.XWinCount.TabIndex = 15;
@@ -245,7 +257,8 @@ namespace TicTacToe
             // 
             this.OWinCount.AutoSize = true;
             this.OWinCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OWinCount.Location = new System.Drawing.Point(287, 432);
+            this.OWinCount.Location = new System.Drawing.Point(383, 540);
+            this.OWinCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OWinCount.Name = "OWinCount";
             this.OWinCount.Size = new System.Drawing.Size(23, 25);
             this.OWinCount.TabIndex = 16;
@@ -255,7 +268,8 @@ namespace TicTacToe
             // 
             this.DrawCount.AutoSize = true;
             this.DrawCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrawCount.Location = new System.Drawing.Point(169, 432);
+            this.DrawCount.Location = new System.Drawing.Point(225, 540);
+            this.DrawCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DrawCount.Name = "DrawCount";
             this.DrawCount.Size = new System.Drawing.Size(23, 25);
             this.DrawCount.TabIndex = 17;
@@ -263,9 +277,10 @@ namespace TicTacToe
             // 
             // tbxP1
             // 
-            this.tbxP1.Location = new System.Drawing.Point(12, 404);
+            this.tbxP1.Location = new System.Drawing.Point(16, 505);
+            this.tbxP1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxP1.Name = "tbxP1";
-            this.tbxP1.Size = new System.Drawing.Size(100, 26);
+            this.tbxP1.Size = new System.Drawing.Size(132, 30);
             this.tbxP1.TabIndex = 18;
             this.tbxP1.Text = "Player 1";
             this.tbxP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -273,9 +288,10 @@ namespace TicTacToe
             // 
             // tbxP2
             // 
-            this.tbxP2.Location = new System.Drawing.Point(247, 404);
+            this.tbxP2.Location = new System.Drawing.Point(329, 505);
+            this.tbxP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxP2.Name = "tbxP2";
-            this.tbxP2.Size = new System.Drawing.Size(100, 26);
+            this.tbxP2.Size = new System.Drawing.Size(132, 30);
             this.tbxP2.TabIndex = 19;
             this.tbxP2.Text = "Player 2";
             this.tbxP2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -283,9 +299,9 @@ namespace TicTacToe
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 461);
+            this.ClientSize = new System.Drawing.Size(484, 576);
             this.Controls.Add(this.tbxP2);
             this.Controls.Add(this.tbxP1);
             this.Controls.Add(this.DrawCount);
@@ -302,7 +318,9 @@ namespace TicTacToe
             this.Controls.Add(this.A2);
             this.Controls.Add(this.A1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.ShowIcon = false;
