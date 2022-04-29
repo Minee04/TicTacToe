@@ -13,7 +13,7 @@ namespace TicTacToe
     public partial class frmMain : Form
     {
 
-        bool turn = true; // true = X turn, false = O Turn
+        bool turn = true; // true = X turn, false = O turn
         int turnCount = 0;
         bool against_computer = false;
 
@@ -32,10 +32,6 @@ namespace TicTacToe
                 {
                     tbxP2.Text = "Computer";
                 }
-                else
-                {
-
-                }
             }
         }
 
@@ -46,7 +42,6 @@ namespace TicTacToe
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Restart", "About");
             turn = true;
             turnCount = 0;
 
@@ -56,7 +51,7 @@ namespace TicTacToe
                     {
                        Button b = (Button)c;
                        b.Enabled = true;
-                      b.Text = "";
+                       b.Text = "";
                     }
                 catch { }
                 } 
@@ -68,10 +63,6 @@ namespace TicTacToe
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 Application.Exit();
-            }
-            else
-            {
-
             }
         }
 
@@ -121,7 +112,7 @@ namespace TicTacToe
                     if (move == null)
                     {
                         move = look_for_corner(); //Look for corner
-                        if(move == null)
+                        if (move == null)
                         {
                             move = look_for_open_space(); //Look for open space
                         }
@@ -187,7 +178,7 @@ namespace TicTacToe
             if (C3.Text == "O")
             {
                 if (A1.Text == "")
-                    return A3;
+                    return A1;
                 if (A3.Text == "")
                     return A3;
                 if (C1.Text == "")
@@ -197,22 +188,23 @@ namespace TicTacToe
             if (C1.Text == "O")
             {
                 if (A1.Text == "")
-                    return A3;
+                    return A1;
                 if (A3.Text == "")
                     return A3;
                 if (C3.Text == "")
                     return C3;
             }
-
-            if (A1.Text == "")
-                return A1;
-            if (A3.Text == "")
-                return A3;
-            if (C1.Text == "")
-                return C1;
-            if (C3.Text == "")
-                return C3;
-
+            else
+            {
+                if (A1.Text == "")
+                    return A1;
+                if (A3.Text == "")
+                    return A3;
+                if (C1.Text == "")
+                    return C1;
+                if (C3.Text == "")
+                    return C3;
+            }
             return null;
         }
 
@@ -323,8 +315,14 @@ namespace TicTacToe
                     XWinCount.Text = (int.Parse(XWinCount.Text) + 1).ToString();
                 }
                     
-
-                MessageBox.Show(winner + " Wins!", "Congrats!");
+                if(against_computer == false)
+                {
+                    MessageBox.Show(winner + " Wins!", "Congrats!");
+                }
+                else
+                {
+                    MessageBox.Show(winner + " Win!", "Congrats!");
+                }
 
             }
             else
@@ -336,7 +334,6 @@ namespace TicTacToe
 
                 }
             }
-
         }
         private void disableButtons()
         {
