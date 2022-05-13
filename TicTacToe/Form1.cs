@@ -95,9 +95,10 @@ namespace TicTacToe
         {
             //Priority 1:  Get tick tac toe
             //Priority 2:  Block x tic tac toe
-            //Priority 3:  Go for middle space
-            //Priority 4:  Go for corner space
-            //Priority 5:  Pick open space
+            //Priority 3:  Go for outside middle
+            //Priority 4:  Go for middle space
+            //Priority 5:  Go for corner space
+            //Priority 6:  Pick open space
 
             Button move = null;
 
@@ -108,16 +109,19 @@ namespace TicTacToe
                 move = look_for_win_or_block("X"); //Look for block
                 if (move == null)
                 {
-                    move = look_for_middle(); //Look for middle
+                    move = look_for_outside_middle(); //Look for outside middle
                     if (move == null)
                     {
                         move = look_for_corner(); //Look for corner
+                    }
+                    if (move == null)
+                    {
+                        move = look_for_middle(); //Look for middle
                         if (move == null)
                         {
                             move = look_for_open_space(); //Look for open space
                         }
                     }
-
                 }
             }
 
@@ -205,6 +209,20 @@ namespace TicTacToe
                 if (C3.Text == "")
                     return C3;
             }
+            return null;
+        }
+
+        private Button look_for_outside_middle()
+        {
+                if (A2.Text == "")
+                    return A2;
+                if (B1.Text == "")
+                    return B1;
+                if (B3.Text == "")
+                    return B3;
+                if (C2.Text == "")
+                    return C2;
+
             return null;
         }
 
