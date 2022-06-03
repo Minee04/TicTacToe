@@ -109,14 +109,14 @@ namespace TicTacToe
                 move = look_for_win_or_block("X"); //Look for block
                 if (move == null)
                 {
-                    move = look_for_corner(); //Look for corner
+                    move = look_for_middle(); //Look for middle
                     if (move == null)
                     {
-                        move = look_for_outside_middle(); //Look for outside middle
+                        move = look_for_corner(); //Look for corner
                     }
                     if (move == null)
                     {
-                        move = look_for_middle(); //Look for middle
+                        move = look_for_outside_middle(); //Look for outside middle
                         if (move == null)
                         {
                             move = look_for_open_space(); //Look for open space
@@ -142,8 +142,8 @@ namespace TicTacToe
                 {
                     if (b.Text == "")
                         return b;
-                }//end if
-            }//end if
+                }
+            }
 
             return null;
         }
@@ -229,6 +229,7 @@ namespace TicTacToe
         private Button look_for_win_or_block(string mark)
         {
             Console.WriteLine("Looking for win or block:  " + mark);
+
             //Horizontal Checks
             if ((A1.Text == mark) && (A2.Text == mark) && (A3.Text == ""))
                 return A3;
