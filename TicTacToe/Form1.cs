@@ -13,7 +13,7 @@ namespace TicTacToe
     public partial class frmMain : Form
     {
         // a = b (Assignment Operator), a having the same value as b.
-        // a == b (Comparison Operator), a test if a and b are equal.
+        // a == b (Comparison Operator), a tests if a and b are equal.
 
         bool turn = true; // true = X turn, false = O turn
         int turnCount = 0;
