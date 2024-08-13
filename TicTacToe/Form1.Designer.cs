@@ -56,6 +56,7 @@ namespace TicTacToe
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -81,21 +82,21 @@ namespace TicTacToe
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(214, 36);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // resetScoreToolStripMenuItem
             // 
             this.resetScoreToolStripMenuItem.Name = "resetScoreToolStripMenuItem";
-            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.resetScoreToolStripMenuItem.Size = new System.Drawing.Size(214, 36);
             this.resetScoreToolStripMenuItem.Text = "Reset Score";
             this.resetScoreToolStripMenuItem.Click += new System.EventHandler(this.resetScoreToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(214, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -111,7 +112,7 @@ namespace TicTacToe
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 

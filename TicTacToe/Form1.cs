@@ -13,7 +13,7 @@ namespace TicTacToe
     public partial class frmMain : Form
     {
         // a = b (Assignment Operator), a having the same value as b.
-        // a == b (Comparison Operator), a test if a and b are equal.
+        // a == b (Comparison Operator), a tests if a and b are equal.
 
         bool turn = true; // true = X turn, false = O turn
         int turnCount = 0;
@@ -131,6 +131,7 @@ namespace TicTacToe
             {
                 move.PerformClick();
             }
+
         }
 
         private Button look_for_open_space()
@@ -345,6 +346,8 @@ namespace TicTacToe
                     MessageBox.Show(winner + " Wins!", "Congrats!");
                 }
 
+                newGameToolStripMenuItem_Click(null, null);
+
             }
             else
             {
@@ -352,9 +355,11 @@ namespace TicTacToe
                 {
                     MessageBox.Show("Draw!", "Result");
                     DrawCount.Text = (int.Parse(DrawCount.Text) + 1).ToString();
-
+                    newGameToolStripMenuItem_Click(null, null);
                 }
+
             }
+        
         }
         private void disableButtons()
         {
@@ -417,5 +422,6 @@ namespace TicTacToe
                 tbxP1.Text = "Player 1";
             }
         }
+        
     }
 }
