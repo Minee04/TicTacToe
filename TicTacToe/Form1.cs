@@ -131,6 +131,7 @@ namespace TicTacToe
             {
                 move.PerformClick();
             }
+
         }
 
         private Button look_for_open_space()
@@ -345,6 +346,8 @@ namespace TicTacToe
                     MessageBox.Show(winner + " Wins!", "Congrats!");
                 }
 
+                newGameToolStripMenuItem_Click(null, null);
+
             }
             else
             {
@@ -352,9 +355,11 @@ namespace TicTacToe
                 {
                     MessageBox.Show("Draw!", "Result");
                     DrawCount.Text = (int.Parse(DrawCount.Text) + 1).ToString();
-
+                    newGameToolStripMenuItem_Click(null, null);
                 }
+
             }
+        
         }
         private void disableButtons()
         {
@@ -417,5 +422,6 @@ namespace TicTacToe
                 tbxP1.Text = "Player 1";
             }
         }
+        
     }
 }
